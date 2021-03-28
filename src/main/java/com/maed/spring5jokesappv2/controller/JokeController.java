@@ -10,9 +10,13 @@ public class JokeController {
 
     private JokeService jokeService;
 
-    @RequestMapping("/","")
-    Model getModel(Model model) {
-        String joke = jokeService.getMeAJoke()
-        return model.addAttribute()
+    public JokeController(JokeService jokeService) {
+        this.jokeService = jokeService;
     }
+
+//    @RequestMapping({"/", ""})
+//    String getJoke(Model model) {
+//        model.addAttribute("joke", jokeService.getMeAJoke());
+//        return "index";
+//    }
 }
